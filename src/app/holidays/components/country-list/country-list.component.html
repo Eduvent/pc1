@@ -1,0 +1,17 @@
+<div class="country-list">
+  <mat-card *ngFor="let country of countries" class="country-card mat-elevation-z3">
+
+    <mat-card-header>
+      <mat-card-title><span class="flag">{{ country.flag_unicode }}</span> {{ country.country_name }}</mat-card-title>
+      <mat-card-subtitle>{{ country.iso_3166 }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Total Holidays: {{ country.total_holidays }}</p>
+      <p>Supported Languages: {{ country.supported_languages }}</p>
+      <p>UUID: {{ country.uuid }}</p>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <a mat-button href="https://calendarific.com" target="_blank" rel="noopener">VIEW MORE</a>
+    </mat-card-actions>
+  </mat-card>
+</div>
